@@ -1,0 +1,1089 @@
+﻿//-------------------
+// PATRON DE COLORES
+//-------------------
+$texto: #222222;
+$principal: #12AFAF;
+$secundario: #F57C00;
+$terciario: #000000;
+//------------------
+// INSERCION DE LAS TIPOGRAFIAS
+//------------------
+@font-face {
+    font-family: UbuntuRegular;
+    src: url(../fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+    font-family: UbuntuBold;
+    src: url(../fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+    font-family: UbuntuItalic;
+    src: url(../fonts/Ubuntu-Italic.ttf);
+}
+@font-face {
+    font-family: UbuntuBoldItalic;
+    src: url(../fonts/Ubuntu-BoldItalic.ttf);
+}
+@font-face {
+    font-family: UbuntuLight;
+    src: url(../fonts/Ubuntu-Light.ttf);
+}
+html {
+    font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: UbuntuLight;
+}
+h6 {
+    font-size: .8rem;
+}
+p {
+    font-family: UbuntuLight;
+    font-size: 1rem;
+}
+//--------------------
+// SECCION BIENVENIDOS
+//--------------------
+.bienvenidos {
+    background: url("../images/fondo-principal-mobile.jpg") no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.meenuprincipal-mobile {
+    background: $texto;
+}
+.encabezado {
+    color: #fff;
+    padding: 0;
+}
+.logo {
+    border-radius: 5px;
+    width: 210px;
+}
+.encabezado .barra-menu-mobile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: $texto;
+}
+.boton-menu {
+    border: 0;
+    font-size: 2.2rem;
+    padding-top: .7rem;
+    background: transparent;
+    color: #fff;
+    margin-left: auto;
+    margin-right: 0;
+}
+.boton-menu:focus {
+    outline: 0;
+}
+#menu-principal {
+    flex: 1 1 100%;
+    background: $texto;
+    opacity: .9;
+    width: 100%;
+}
+#menu-principal ul {
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0 0 0;
+}
+#menu-principal ul li a {
+    font-family: UbuntuLight;
+    display: block;
+    padding: .5rem 0;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#menu-principal ul li.active a,
+#menu-principal ul li a:hover {
+    color: $secundario;
+}
+.texto-encabezado {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+    color: #fff;
+}
+.texto-encabezado h1 {
+    font-size: 3rem;
+}
+.texto-encabezado p {
+    margin-bottom: 0;
+}
+.texto-encabezado .btn-primary {
+    font-family: UbuntuRegular;
+    font-size: 1.4rem;
+    background: $principal;
+    opacity: .6;
+    color: #fff;
+    padding: 1.05rem 4rem;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    transition: all .5 ease;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 0;
+}
+.texto-encabezado .btn-primary:hover,
+.texto-encabezado .btn-primary:focus,
+.texto-encabezado .btn-primary:active:hover {
+    opacity: 1;
+    outline: 0;
+    background: $principal;
+}
+.flecha-bajar a {
+    display: inline-block;
+    color: #fff;
+    font-size: 4rem;
+    animation: flecha-animada 2s ease-in-out infinite;
+    margin-left: auto;
+    margin-right: auto;
+}
+@keyframes flecha-animada {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+//****************************************************************************************************************
+//                            SECCION LA EMPRESA
+//****************************************************************************************************************
+.laempresa {
+    background: $principal;
+    color: #fff;
+}
+.laempresa img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    padding: .5rem;
+    max-width: 350px;
+}
+//****************************************************************************************************************
+//                            SECCION LO MEJOR
+//****************************************************************************************************************
+.lomejor ul,
+{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.lomejor ul li .contenedor-eleccion {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.lomejor ul li .fa {
+    font-size: 3rem;
+    flex-shrink: 0;
+    background: $secundario;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+}
+.lomejor ul li .fa-tablet {
+    font-size: 4rem;
+}
+.lomejor ul li .fa-mobile {
+    font-size: 4.5rem;
+}
+.lomejor ul li p {
+    font-size: .9rem;
+    margin: 0;
+    margin-left: 1rem;
+}
+//****************************************************************************************************************
+//                            SECCION LO MEJOR DESKTOP
+//****************************************************************************************************************
+.lomejor-desktop .eleccion01 {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.lomejor-desktop .eleccion02 {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.lomejor-desktop ul li .contenedor-eleccion {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.lomejor-desktop ul li .contenedor-eleccion-1 {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.lomejor-desktop ul li .fa {
+    font-size: 3rem;
+    flex-shrink: 0;
+    background: $secundario;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+}
+.lomejor-desktop ul li .fa-tablet {
+    font-size: 4rem;
+}
+.lomejor-desktop ul li .fa-mobile {
+    font-size: 4.5rem;
+}
+.lomejor-desktop ul li p {
+    font-size: .9rem;
+    margin: 0;
+    margin-left: 1rem;
+}
+//****************************************************************************************************************
+//                            SECCION SERVICIOS
+//****************************************************************************************************************
+.servicios {
+    background: url(../images/fondo-principal-nuestrosservicios-mobile.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed !important;
+    color: #fff;
+}
+.servicios article {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    width: 90%;
+}
+.servicios img {
+    flex: 0 0 65px;
+    overflow: hidden;
+    margin-right: .7rem;
+}
+.servicios h3 {
+    margin: 0;
+    font-size: 1rem;
+    flex: 1 1 auto;
+}
+.servicios h3 a {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+//****************************************************************************************************************
+//                            CONTACTO
+//****************************************************************************************************************
+.contacto {
+    background: url(../images/nettside-principal-fondo-contactanos.jpg) no-repeat center center;
+    background-size: cover;
+}
+.contacto .form-group {
+    padding-left: 0;
+    margin-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+}
+.contacto .formulario {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.contacto .formulario .form-group .pre-input {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.contacto input,
+.contacto textarea {
+    background: $texto;
+    font-family: UbuntuLight;
+    font-size: 1rem;
+    opacity: .8;
+    transition: all .5s ease;
+    color: #fff;
+    border-radius: 9px;
+}
+.contacto input:focus,
+.contacto textarea:focus {
+    background: $texto;
+    opacity: .8;
+    transition: all .5s ease;
+    color: #fff;
+    border-radius: 9px;
+}
+.contacto input::placeholder,
+.contacto textarea::placeholder {
+    opacity: 1 !important;
+    color: #fff;
+    font-family: UbuntuLight;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+.contacto .pre-input .btn-primary {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    border-radius: 9px;
+    background: $texto;
+    opacity: .8;
+    outline: 0;
+}
+.contacto .pre-input .btn-primary p {
+    opacity: 1 !important;
+    margin: 0;
+}
+.contacto .pre-input .btn-primary:hover,
+.contacto .pre-input .btn-primary:active:hover .contacto .pre-input .btn-primary:focus {
+    background: $texto;
+    opacity: 1;
+    outline: 0;
+}
+.contacto .codigo-qr .cajon-qr {
+    background: $texto;
+    opacity: .8;
+    border-radius: 15px;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contacto .codigo-qr p {
+    font-size: 1.1rem;
+    font-family: UbuntuBold;
+}
+.contacto .correos-contacto .cajon-correos {
+    background: $texto;
+    opacity: .8;
+    border-radius: 15px;
+    width: 270px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.contacto .correos-contacto .cajon-correos ul {
+    padding: 0;
+}
+.contacto .correos-contacto .cajon-correos ul li {
+    list-style: none;
+}
+.contacto .correos-contacto .cajon-correos img {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    opacity: 1 !important;
+}
+.contacto .correos-contacto .cajon-correos p {
+    font-family: UbuntuLight;
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 2rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    opacity: 1 !important;
+}
+.contacto .whatsapp-contacto {
+    text-align: center;
+}
+.contacto .whatsapp-contacto .cajon-whatsapp {
+    background: $texto;
+    opacity: .8;
+    border-radius: 15px;
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contacto .whatsapp-contacto .cajon-whatsapp img {
+    width: 60%;
+    opacity: 1 !important;
+    margin-top: 1rem;
+}
+.contacto .whatsapp-contacto .cajon-whatsapp p {
+    font-family: UbuntuLight;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    opacity: 1 !important;
+}
+//****************************************************************************************************************
+//                            PIE DE PAGINA
+//****************************************************************************************************************
+.piedepagina {
+    background: $texto;
+    color: #fff;
+    text-align: center;
+    font-size: .9rem;
+}
+.piedepagina .redes-sociales {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+.piedepagina .redes-sociales li {
+    background: $principal;
+    width: 45px;
+    height: 45px;
+    margin-left: .15rem;
+    margin-right: .15rem;
+    line-height: 45px;
+    border-radius: 50%;
+    text-align: center;
+}
+.piedepagina .redes-sociales a {
+    color: #fff;
+    font-size: 1.6rem;
+}
+.piedepagina .redes-sociales p {
+    color: #fff;
+    font-size: .5rem;
+}
+.piedepagina h6 {
+    margin-top: 3.5rem !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+.flecha-arriba {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    color: $secundario;
+    text-decoration: none;
+    z-index: 99999;
+    line-height: 0;
+    transition: all .5s ease;
+    opacity: .3;
+}
+.flecha-arriba:hover,
+.flecha-arriba:focus {
+    outline: 0;
+    text-decoration: none;
+    color: $secundario;
+    opacity: .6;
+}
+//****************************************************************************************************************
+//                            MODALES
+//****************************************************************************************************************
+.modal h5 {
+    color: $principal;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.modal a {
+    text-decoration: none;
+    color: $texto;
+}
+.modal a:hover {
+    color: $principal;
+    text-decoration: underline;
+}
+//****************************************************************************************************************
+//****************************************************************************************************************
+//****************************************************************************************************************
+//                     PAGINAs INTERNAS
+//***************************************************************************************************************
+//****************************************************************************************************************
+//****************************************************************************************************************
+.paginas-internas .bienvenidos .texto-encabezado h1 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.ruta {
+    background: $principal;
+    color: #fff;
+}
+.paginas-internas .ruta a {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #fff;
+    text-decoration: underline;
+}
+.paginas-internas .ruta a:hover {
+    text-decoration: none;
+}
+.paginas-internas .acordeon-nosotros {
+    font-size: 2rem;
+}
+.paginas-internas .card {
+    border: 0;
+}
+.paginas-internas .acordeon-nosotros a {
+    background: $principal;
+    color: #fff;
+    display: block;
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+.paginas-internas .acordeon-nosotros a:hover {
+    background: $secundario;
+    color: #000;
+}
+.paginas-internas #pagina-nosotros aside {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.paginas-internas #pagina-nosotros aside img {
+    width: 100%;
+}
+//****************************************************************************************************************
+//****************************************************************************************************************
+//****************************************************************************************************************
+//                            MEDIA QUERYS
+//***************************************************************************************************************
+//****************************************************************************************************************
+//****************************************************************************************************************
+@media (max-width: 767px) {
+    .meenuprincipal-desktop {
+        display: none;
+    }
+    .lomejor-desktop {
+        display: none;
+    }
+    .servicios h3 a::after {
+        content: "\f054";
+        font-family: FontAwesome;
+        font-size: 2rem;
+        margin-left: 1rem;
+        opacity: .5;
+        position: relative;
+        left: 0;
+        transition: all .5s ease;
+    }
+    .servicios h3 a:hover::after {
+        left: -.5rem;
+        opacity: 1;
+        color: $principal;
+    }
+    .servicios .btn-primary {
+        display: none;
+    }
+    .animated {
+        /*CSS transitions*/
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        /*CSS transforms*/
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+}
+@media (min-width: 768px) {
+    .bienvenidos {
+        background: url("../images/fondo-principal-desktop.jpg") no-repeat center top;
+        background-size: cover;
+        background-attachment: fixed !important;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .barra-menu-mobile {
+        display: none;
+    }
+    .boton-menu {
+        display: none;
+    }
+    .lomejor {
+        display: none;
+    }
+    #menu-principal-desktop ul {
+        color: #fff;
+        display: flex;
+        list-style: none;
+    }
+    #menu-principal-desktop ul li {
+        font-size: 1rem;
+        color: #fff;
+    }
+    #menu-principal-desktop ul li a {
+        font-size: .8rem;
+        color: #fff;
+        text-decoration: none;
+        margin-left: .4rem;
+        margin-right: .4rem;
+        margin-bottom: 2rem;
+        padding-bottom: .8rem;
+    }
+    #menu-principal-desktop ul li.active a,
+    #menu-principal-desktop ul li a:hover {
+        color: $principal;
+        margin-top: 1rem;
+        border-bottom: 4px solid;
+    }
+    .texto-encabezado {
+        margin-top: 4rem;
+    }
+    .texto-encabezado .btn-primary {
+        margin-top: auto;
+        margin-bottom: 1rem;
+        transition: all .5 ease;
+        margin-left: auto;
+        margin-right: auto;
+        outline: 0;
+    }
+    .texto-encabezado h1 {
+        margin-top: auto;
+        margin-bottom: 1rem;
+    }
+    .texto-encabezado p {
+        margin-top: 1rem;
+        margin-bottom: auto;
+    }
+    .servicios article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 1rem;
+        margin: 1rem 0;
+        width: 90%;
+    }
+    .servicios img {
+        flex: 0 0 200px;
+        overflow: hidden;
+    }
+    .servicios h3 {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        flex: 1 1 auto;
+    }
+    .servicios .btn-primary {
+        background: $principal;
+        border: 0;
+        margin-top: 1rem;
+        font-size: .9rem;
+    }
+    .codigo-qr {
+        order: 1;
+    }
+    .correos-contacto {
+        order: 3;
+        margin-top: 1rem;
+    }
+    .whatsapp-contacto {
+        order: 2;
+        margin-top: auto;
+    }
+    .piedepagina h6 {
+        margin-top: auto !important;
+        margin-bottom: auto;
+    }
+    .texto-footer {
+        order: 1;
+    }
+    .redes-sociales {
+        order: 2;
+        . margin-top: auto;
+        margin-bottom: auto;
+    }
+    .paginas-internas #pagina-contactanos {
+        background: url(../images/nettside-principal-fondo-contactanos.jpg) no-repeat center center;
+        background-size: cover;
+    }
+}
+@media (max-width: 991px) {
+    .lomejor-desktop .imagen-lomejor {
+        display: none;
+    }
+    .servicios article p {
+        display: none;
+    }
+    .contenedor-contactos-lg {
+        display: none;
+    }
+}
+@media (min-width: 992px) {
+    html {
+        font-size: 17px;
+    }
+    .laempresa img {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .lomejor-desktop .imagen-lomejor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .lomejor-desktop .imagen-lomejor img {
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .servicios p {
+        margin-top: 1rem;
+        font-size: .9rem;
+        flex: 1 1 auto;
+    }
+    .contenedor-formulario {
+        max-width: 900px;
+    }
+    .formulario2 .boton-formulario p {
+        padding: .2rem;
+    }
+    .contenedor-contactos {
+        display: none;
+    }
+    .contenedor-contactos-lg {
+        max-width: 900px;
+    }
+    .contenedor-contactos-lg p {
+        text-align: left;
+        font-size: 1rem;
+        font-family: UbuntuBold;
+    }
+    .codigo-qr {
+        order: 1;
+        margin-top: 0;
+        margin-bottom: auto;
+    }
+    .correos-contacto {
+        order: 2;
+        margin-top: 0;
+        margin-bottom: auto;
+    }
+    .whatsapp-contacto {
+        order: 3;
+        margin-top: 0;
+        margin-bottom: auto;
+    }
+    .contacto .correos-contacto .cajon-correos {
+        background: $texto;
+        opacity: .8;
+        border-radius: 15px;
+        width: 350px;
+        height: 180px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0 !important;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+    .contenedor-correos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+    .contenedor-correos li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .contenedor-correos li img {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        margin-right: .4rem;
+    }
+}
+//****************************************************************************************************************
+//****************************************************************************************************************
+//****************************************************************************************************************
+//                     PAGINAS INTERNAS
+//***************************************************************************************************************
+//****************************************************************************************************************
+//****************************************************************************************************************
+.pagina-nosotros .bienvenidos .texto-encabezado h1 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.paginas-internas .bienvenidos {
+    background: url("../images/fondo-principal-mobile.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed !important;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+.paginas-internas .flecha-bajar {
+    display: none;
+}
+.paginas-internas #pagina-servicios {
+    background: #f57c00bf;
+}
+.paginas-internas #pagina-servicios .item-servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    text-align: center;
+    border: 5px solid $principal;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+.paginas-internas #pagina-servicios .item-servicios .btn-primary {
+    font-family: UbuntuRegular;
+    font-size: 1rem;
+    background: $principal;
+    opacity: .85;
+    color: #fff;
+    padding: .9rem 2rem;
+    border: 0;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: 0;
+    transition: all .5 ease;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 0;
+}
+.paginas-internas #pagina-servicios .item-servicios .btn-primary:hover,
+.paginas-internas #pagina-servicios .item-servicios .btn-primary:focus,
+.paginas-internas #pagina-servicios .item-servicios .btn-primary:active:hover {
+    opacity: 1;
+    outline: 0;
+    background: $principal;
+}
+.paginas-internas #pagina-servicios .item-servicios img {
+    flex: 0 0 120px;
+    margin-bottom: 1rem;
+}
+.paginas-internas #pagina-servicios .item-servicios p {
+    font-size: .9rem;
+}
+.paginas-internas #pagina-servicios .col-md-6 {
+    display: flex;
+}
+.modal-body p {
+    font-size: 1rem !important;
+}
+.modal-body img {
+    max-width: 120px;
+}
+//**********************************************************************************************
+//**********************************************************************************************
+//                        PAGINA INTERNA CONTACTANOS
+//**********************************************************************************************
+//**********************************************************************************************
+.paginas-internas #pagina-contactanos .form-group {
+    padding-left: 0;
+    margin-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+}
+.paginas-internas #pagina-contactanos .formulario {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.paginas-internas #pagina-contactanos .formulario .form-group .pre-input {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.paginas-internas #pagina-contactanos input,
+.paginas-internas #pagina-contactanos textarea {
+    background: $texto;
+    font-family: UbuntuLight;
+    font-size: 1rem;
+    opacity: .8;
+    transition: all .5s ease;
+    color: #fff;
+    border-radius: 9px;
+}
+.paginas-internas #pagina-contactanos input:focus,
+.paginas-internas #pagina-contactanos textarea:focus {
+    background: $texto;
+    opacity: .8;
+    transition: all .5s ease;
+    color: #fff;
+    border-radius: 9px;
+}
+.paginas-internas #pagina-contactanos input::placeholder,
+.paginas-internas #pagina-contactanos textarea::placeholder {
+    opacity: 1 !important;
+    color: #fff;
+    font-family: UbuntuLight;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+.paginas-internas #pagina-contactanos .pre-input .btn-primary {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    border-radius: 9px;
+    background: $texto;
+    opacity: .8;
+    outline: 0;
+}
+.paginas-internas #pagina-contactanos .pre-input .btn-primary p {
+    opacity: 1 !important;
+    margin: .2rem;
+}
+.paginas-internas #pagina-contactanos .pre-input .btn-primary:hover,
+.paginas-internas #pagina-contactanos .pre-input .btn-primary:active:hover .contacto .pre-input .btn-primary:focus {
+    background: $texto;
+    opacity: 1;
+    outline: 0;
+}
+.paginas-internas #pagina-contactanos .codigo-qr .cajon-qr {
+    background: $texto;
+    opacity: .8;
+    border-radius: 15px;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.paginas-internas #pagina-contactanos .codigo-qr p {
+    font-size: 1.1rem;
+    font-family: UbuntuBold;
+}
+.paginas-internas #pagina-contactanos .correos-contacto .cajon-correos {
+    background: $texto;
+    opacity: .8;
+    border-radius: 15px;
+    width: 270px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.paginas-internas #pagina-contactanos .correos-contacto .cajon-correos ul {
+    padding: 0;
+}
+.paginas-internas #pagina-contactanos .correos-contacto .cajon-correos ul li {
+    list-style: none;
+}
+.paginas-internas #pagina-contactanos .correos-contacto .cajon-correos img {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    opacity: 1 !important;
+}
+.paginas-internas #pagina-contactanos .correos-contacto .cajon-correos p {
+    font-family: UbuntuLight;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 2rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    opacity: 1 !important;
+}
+.paginas-internas #pagina-contactanos .whatsapp-contacto {
+    text-align: center;
+}
+.paginas-internas #pagina-contactanos .whatsapp-contacto .cajon-whatsapp {
+    background: $texto;
+    opacity: .8;
+    border-radius: 15px;
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.paginas-internas #pagina-contactanos .whatsapp-contacto .cajon-whatsapp img {
+    width: 60%;
+    opacity: 1 !important;
+    margin-top: 1rem;
+}
+.paginas-internas #pagina-contactanos .whatsapp-contacto .cajon-whatsapp p {
+    font-family: UbuntuLight;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    opacity: 1 !important;
+}
+@media (min-width: 992px) {
+    .paginas-internas #pagina-contactanos .correos-contacto .cajon-correos {
+        background: $texto;
+        opacity: .8;
+        border-radius: 15px;
+        width: 350px;
+        height: 180px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0 !important;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+}
